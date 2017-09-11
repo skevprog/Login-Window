@@ -5,6 +5,9 @@
  */
 package LoginWindow;
 
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author Kevin
@@ -31,11 +34,18 @@ public class Ventana extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(68, 219, 219));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -45,8 +55,8 @@ public class Ventana extends javax.swing.JPanel {
 
         jLabel2.setFont(new java.awt.Font("Dotum", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Escribir aquí");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 120, 30));
+        jLabel2.setText("Create an Account");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 130, 30));
 
         jLabel6.setFont(new java.awt.Font("Dotum", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -57,32 +67,73 @@ public class Ventana extends javax.swing.JPanel {
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, 150, 10));
 
-        jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
-        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 372, 200, 10));
+        jSeparator4.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator4.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 372, 200, 10));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 460));
 
         jLabel3.setFont(new java.awt.Font("Dotum", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Sign in or Sign up");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 130, 30));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, 130, 30));
 
         jLabel4.setFont(new java.awt.Font("Dotum", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("FULL NAME");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 130, 30));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 130, 30));
 
         jLabel5.setFont(new java.awt.Font("Dotum", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("PASSWORD");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, 130, 30));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, 130, 30));
 
         jLabel8.setFont(new java.awt.Font("Dotum", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("EMAIL");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 130, 30));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 290, 130, 30));
+
+        jSeparator3.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator3.setForeground(new java.awt.Color(255, 255, 255));
+        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 372, 200, 10));
+
+        jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 200, 10));
+
+        jSeparator5.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator5.setForeground(new java.awt.Color(255, 255, 255));
+        add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 350, 200, 10));
+
+        jSeparator6.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator6.setForeground(new java.awt.Color(255, 255, 255));
+        add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 200, 10));
+
+        jPasswordField1.setBackground(new java.awt.Color(69, 219, 219));
+        jPasswordField1.setForeground(new java.awt.Color(255, 255, 255));
+        jPasswordField1.setBorder(null);
+        add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 200, -1));
+
+        jTextField1.setBackground(new java.awt.Color(68, 219, 219));
+        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField1.setText("Enter your full name");
+        jTextField1.setBorder(null);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 200, 20));
+
+        jTextField2.setBackground(new java.awt.Color(69, 219, 219));
+        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField2.setBorder(null);
+        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 330, 200, -1));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -93,7 +144,32 @@ public class Ventana extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
+
+
+    public static void main(String[] args) {
+        Ventana vens=new Ventana();
+        SwingUtilities.invokeLater(new Runnable() {
+        public void run() {
+            
+            JFrame frame = new JFrame();
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.getContentPane().add(vens);
+            frame.pack();
+            frame.setVisible(true);
+        }
+    });
+   
+    }
 }
+
+
